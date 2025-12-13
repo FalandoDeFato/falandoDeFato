@@ -3,7 +3,7 @@
 
 :root {
     /* O seletor ':root' define variáveis CSS globais que podem ser usadas em todo o projeto. */
-    
+
     /* 1. VARIÁVEIS PARA AS ESPESSURAS (FONT-WEIGHT) */
     --font-weight-regular: 400;
     /* Define a variável para o peso regular da fonte. */
@@ -290,7 +290,7 @@ h2 {
     /* Alinha o conteúdo à esquerda dentro do card. */
     border-radius: 25px;
     /* Borda arredondada. */
-    width: 317px;   
+    width: 317px;
     /* Largura fixa do card. */
     height: 394px;
     /* Altura fixa do card. */
@@ -367,6 +367,7 @@ h2 {
         text-decoration: underline;
         /* Adiciona um sublinhado. */
     }
+
 }
 
 .card1,
@@ -591,7 +592,7 @@ h4 {
     /* Empurra o selo para a esquerda. */
 }
 
-.imagem{
+.imagem {
     /* Estilos para a div de imagem (provavelmente um fundo ou separador). */
     max-width: 1730px;
     /* Largura máxima. */
@@ -601,7 +602,7 @@ h4 {
     /* Remove preenchimentos. */
     height: 0;
     /* Altura zero (a imagem interna pode estar flutuando ou ter um posicionamento absoluto). */
-    
+
 }
 
 .mensagem {

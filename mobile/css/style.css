@@ -343,10 +343,6 @@ h2 {
 
 
     h3 {
-        /* Estilos para o título 'Golpes Recentes:'. */
-        display: flex;
-        /* Ativa o Flexbox. */
-        align-items: flex-start;
         /* Alinha o texto ao topo. */
         font-weight: 500;
         /* Peso médio. */
@@ -357,7 +353,8 @@ h2 {
         /* Margem inferior para separar do primeiro grupo de cards. */
         text-decoration: underline;
         /* Adiciona um sublinhado*/
-        padding-top: 50px;
+        padding-top: 10px;
+        padding-left: 30px;
     }
 }
 
