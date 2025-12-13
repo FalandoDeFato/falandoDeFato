@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Falando De Fato!</title>
+    <link rel="shortcut icon" href="image/iconFato.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Projeto de combate as notícias falsas">
+    <meta name="keywords" content="notícia, falando de fato, Demoday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Thaís de Souza">
+
+    <link rel="stylesheet" href="css/noticiaFraude.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="image/logo.svg" alt="Balão de fala na cor verde e azul com um check dentro">
+        <!-- shift+ a + seta para baixo = clona a linha -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="#fale-conosco">Fale Conosco</a></li>
+            </ul>
+            <div>
+                <button onclick="window.location.href='login.html';">Login</button>
+                <button onclick="window.location.href='login.html';">Cadastre-se</button>
+            </div>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- MENU DROPDOWN QUE VAI APARECER NO MOBILE -->
+    <div class="dropdown-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><a href="#fale-conosco">Fale Conosco</a></li>
+        <li class="dropdown-buttons">
+            <button onclick="window.location.href='login.html';">Login</button>
+        </li>
+        <li class="dropdown-buttons">
+            <button onclick="window.location.href='login.html';">Cadastre-se</button>
+        </li>
+    </div>
+    <main>
+        <section>
+            <div class="imagemNoticia">
+                <img src="image/noticiaSenado.svg" alt="">
+            </div>
+            <div class="noticia">
+                <h1>Senado e o Combate <br>à Desinformação</h1>
+
+                <p class="primeiroP">O Senado Federal tem demonstrado uma crescente preocupação com os efeitos da desinformação e das notícias falsas (fake news) sobre as instituições democráticas e a vida pública no Brasil. Esse debate evoluiu significativamente desde o Marco Civil da Internet (2014), que estabeleceu os princípios de uso da rede, mas ganhou força com o PL 2.630/2020, conhecido como Lei das Fake News. Embora este projeto ainda esteja em análise na Câmara, ele exige maior transparência, prestação de contas sobre moderação e busca responsabilizar as plataformas por conteúdos nocivos que circulam em suas redes.</p>
+
+                <p class="segundoP">Nos avanços mais recentes, o Senado aprovou duas propostas importantes que moldarão o futuro digital. Em 2024, foi aprovado o projeto que regulamenta a Inteligência Artificial (IA) no Brasil (PL 2.338/2023), que define conceitos, direitos e deveres para o setor, dialogando com entendimentos do Supremo Tribunal Federal (STF). Além disso, a casa legislativa consolidou a aprovação do projeto contra a adultização infantil (PL 2628/2022), estabelecendo regras robustas para a proteção de crianças e adolescentes no ambiente digital, um tema que ganhou urgência após grande mobilização pública.</p>
+
+                <p class="terceiroP">O combate à desinformação se estende a outras áreas críticas, como a legislação sobre crimes eleitorais e a regulação das redes sociais. O Senado acompanha a discussão sobre a responsabilização das plataformas por postagens criminosas ou ofensivas, tema que o STF também tem pautado. Para garantir que o Legislativo acompanhe a rápida evolução tecnológica, existe a proposta de criação de uma Frente Parlamentar Mista de Inteligência Artificial, Tecnologia da Informação, Segurança Cibernética e Combate à Desinformação, visando um fórum permanente de debates e subsídios para futuras regulamentações.</p>
+            </div>
+        </section>
+        <div class="imagem">
+            <img src="fundos/fundoNoticias.svg" alt="">
+        </div>
+        <section>
+            <div class="informacoesNoticia">
+                <div class="lupita">
+                    <img src="image/lupitaNoticias.svg"
+                        alt="Imagem de uma raposa vestindo um sobre tudo com um chápel e uma lupa na mão direita">
+                    <div class="verificacao">
+                        <p>Data:<br><span>10/09/2025</span></p>
+                        <p>Data da Verificação:<br><span>29/11/2025</span></p>
+                        <p>Classificação:<br><span>100% Fato</span></p>
+                        <a href="https://www12.senado.leg.br/verifica/materias-especiais/2025/senado-discute-propostas-para-enfrentar-desinformacao" class="fonte">+Fonte</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="fale-conosco">
+        <div class="form-box">
+            <form action="#">
+                <h6>Contate-Nos</h6>
+                <div class="input-box">
+                    <p>Nome</p>
+                    <input type="text" placeholder="Nome Completo...">
+                </div>
+                <div class="input-box">
+                    <p>E-mail</p>
+                    <input type="email" placeholder="Digite seu e-mail...">
+                </div>
+                <div class="input-box">
+                    <p>Mensagem</p>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40"
+                        placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+        <div class="navegacao">
+            <h6>Navegação</h6>
+            <ul>
+                <li><a href="sobrenos.html">Nossa História</a></li>
+                <li><a href="https://chat-da-lupita.vercel.app">IA Lupita</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="planos.html">Nossos Planos</a></li>
+            </ul>
+        </div>
+        <div class="contato">
+            <ul>
+                <li> <img src="image/logoBranco.svg" alt="Um balão de fala com um check dentro da cor branca"></li>
+                <li><a href="mailto:falandodefato@gmail.com">falandodefato@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/falandodefato/">@falandodefato</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <!-- VLibras - Acessibilidade Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

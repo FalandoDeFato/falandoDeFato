@@ -1,0 +1,60 @@
+<html lang="pt-br">
+
+<head>
+    <title>falando DE FATO!</title>
+    <link rel="shortcut icon" href="image/iconFato.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Tela de login feita para o projeto demoday">
+    <meta name="keywords" content="notícia, falando de fato, Demoday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Thaís de Souza">
+
+    <link rel="stylesheet" href="css/styleLiquid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <script>
+        // Função para verificar se o dispositivo é móvel
+        function isMobile() {
+            // Verifica a string do Agente de Usuário para palavras-chave comuns em dispositivos móveis.
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Definindo os caminhos completos dos arquivos (seguro para o seu caso)
+        // O caminho é relativo à pasta onde este arquivo (index.html) está.
+        const mobilePath = "mobile/index.html"; 
+        const webPath = "web/index.html"; 
+
+        // Obtém o caminho completo atual para evitar loops.
+        const currentPath = window.location.href;
+
+        // 1. LÓGICA DE REDIRECIONAMENTO
+
+        // Se for um dispositivo móvel
+        if (isMobile()) {
+            // Se a URL atual NÃO CONTÉM o caminho mobile, redireciona.
+            // O .indexOf() retorna -1 se a string não for encontrada.
+            if (currentPath.indexOf(mobilePath) === -1) {
+                window.location.href = mobilePath;
+            }
+        // 2. Se for um dispositivo desktop
+        } else {
+            // Se a URL atual NÃO CONTÉM o caminho web, redireciona.
+            if (currentPath.indexOf(webPath) === -1) {
+                window.location.href = webPath;
+            }
+        }
+        
+        // Se já estiver na página correta, o script não faz nada e a página é carregada normalmente.
+    </script>
+</head>
+
+<body>
+    
+    <div class="rainbow-loader"></div>
+
+    <script src="js/scriptLoading.js"></script>
+</body>
+
+</html>

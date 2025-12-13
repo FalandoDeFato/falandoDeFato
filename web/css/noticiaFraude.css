@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* Importa a fonte 'Outfit' do Google Fonts, garantindo que todos os pesos (100 a 900) estejam disponíveis. */
+
+:root {
+    /* O seletor ':root' define variáveis CSS globais que podem ser usadas em todo o projeto. */
+    
+    /* 1. VARIÁVEIS PARA AS ESPESSURAS (FONT-WEIGHT) */
+    --font-weight-regular: 400;
+    /* Define a variável para o peso regular da fonte. */
+    --font-weight-medium: 500;
+    /* Define a variável para o peso médio da fonte. */
+    --font-weight-semibold: 600;
+    /* Define a variável para o peso semi-negrito da fonte. */
+    --font-weight-bold: 700;
+    /* Define a variável para o peso negrito da fonte. */
+    --font-weight-extrabold: 800;
+    /* Define a variável para o peso extra-negrito da fonte. */
+
+    /* 2. VARIÁVEL PARA O NOME DA FAMÍLIA DE FONTES */
+    --font-family-principal: 'Outfit', sans-serif;
+    /* Define a variável para a família de fontes principal. */
+}
+
+* {
+    /* O seletor universal '*' aplica regras a **todos** os elementos da página. */
+    margin: 0;
+    /* Remove a margem padrão de todos os elementos. */
+    padding: 0;
+    /* Remove o preenchimento (padding) padrão de todos os elementos. */
+    box-sizing: border-box;
+    /* Garante que o padding e a borda sejam incluídos dentro da largura e altura total do elemento (facilita o layout). */
+    font-family: "Outfit", sans-serif;
+    /* Aplica a fonte 'Outfit' a todos os elementos. */
+    text-decoration: none;
+    /* Remove sublinhados de links e outros elementos de texto. */
+    list-style: none;
+    /* Remove os marcadores de lista padrão (pontos, números, etc.) de <li>. */
+}
+
+body {
+    /* Estilos aplicados ao corpo da página. */
+    background-image: url(../fundos/image-fundo-header.svg);
+    /* Define a imagem de fundo para o cabeçalho. */
+    background-size: 100%;
+    /* Redimensiona a imagem de fundo para cobrir 100% da largura. */
+    background-repeat: no-repeat;
+    /* Impede que a imagem de fundo seja repetida. */
+}
+
+header {
+    /* Estilos aplicados ao cabeçalho (topo da página). */
+    max-width: 1730px;
+    /* Define uma largura máxima para o conteúdo do cabeçalho. */
+    margin: auto;
+    /* Centraliza o cabeçalho horizontalmente dentro do 'body'. */
+    display: flex;
+    /* Ativa o Flexbox para alinhar os itens (logo, navegação) na mesma linha. */
+    justify-content: space-between;
+    /* Distribui o espaço entre a logo e o elemento <nav>. */
+    padding: 55.37px 89px;
+    /* Adiciona preenchimento (padding) superior/inferior e lateral. */
+}
+
+nav {
+    /* Estilos aplicados ao elemento de navegação. */
+    display: flex;
+    /* Ativa o Flexbox. */
+    align-items: center;
+    /* Centraliza os itens verticalmente (menu de links e botões). */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente (embora 'space-between' no 'header' já os posicione). */
+    gap: 150px;
+    /* Define um grande espaçamento entre o <ul> (links) e o <div> (botões). */
+
+    ul {
+        /* Estilos aplicados à lista não ordenada (menu de links) dentro do 'nav'. */
+        display: flex;
+        /* Ativa o Flexbox para alinhar os links horizontalmente. */
+        gap: 36px;
+        /* Espaçamento entre os itens da lista (links). */
+
+        li a {
+            /* Estilos aplicados aos links <a> dentro dos itens da lista <li>. */
+            font-weight: 500;
+            /* Peso médio da fonte. */
+            font-size: 30px;
+            /* Tamanho da fonte dos links. */
+            color: #000;
+            /* Cor do texto preta. */
+        }
+    }
+
+    buttom {
+        /* Seletor incorreto (deveria ser 'button' ou '.nav div button'). */
+        width: 289px;
+        /* Define a largura para o (provável) elemento 'button'. */
+        height: 60px;
+        /* Define a altura para o (provável) elemento 'button'. */
+    }
+
+    button:first-child {
+        /* Estilos aplicados ao primeiro botão dentro do 'nav div' (Provavelmente o "Login"). */
+        font-weight: 500;
+        /* Peso médio da fonte. */
+        font-size: 30px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor do texto preta. */
+        background-color: #d4defb;
+        /* Cor de fundo azul claro. */
+        border: none;
+        /* Remove a borda padrão do botão. */
+
+    }
+
+    button:last-child {
+        /* Estilos aplicados ao último botão dentro do 'nav div' (Provavelmente o "Cadastre-se"). */
+        font-weight: 500;
+        /* Peso médio da fonte. */
+        font-size: 30px;
+        /* Tamanho da fonte. */
+        color: #fff;
+        /* Cor do texto branca. */
+        border: none;
+        /* Remove a borda. */
+        border-radius: 25px;
+        /* Borda arredondada (mais que os botões do header). */
+        width: 194px;
+        /* Largura menor que o primeiro botão. */
+        height: 55px;
+        /* Altura menor que o primeiro botão. */
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.25);
+        /* Adiciona uma sombra suave ao botão. */
+        background: #45a353;
+        /* Cor de fundo verde. */
+    }
+}
+
+section {
+    /* Estilos aplicados a todas as seções principais da página. */
+    max-width: 1730px;
+    /* Define uma largura máxima para o conteúdo das seções. */
+    margin: auto;
+    /* Centraliza a seção horizontalmente. */
+    /* Centraliza horizontalmente e remove a margem vertical desnecessária */
+    padding: 0px 70px;
+    /* Adiciona preenchimento superior/inferior e lateral. */
+
+}
+
+.imagemNoticia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin-top: 60px;
+}
+
+.noticia {
+    gap: 30px;
+
+    h1 {
+        font-weight: 500;
+        font-size: 74px;
+        text-align: center;
+        color: #000;
+        margin-top: 50px;
+    }
+
+    .primeiroP {
+        font-weight: 500;
+        font-size: 40px;
+        text-align: center;
+        color: #000;
+        margin-top: 35px;
+        padding: 55.37px 115px;
+    }
+
+    .segundoP {
+        font-weight: 500;
+        font-size: 40px;
+        text-align: center;
+        color: #000;
+        margin-top: 25px;
+        padding: 0px 115px;
+    }
+
+    .terceiroP {
+        font-weight: 500;
+        font-size: 40px;
+        text-align: center;
+        color: #000;
+        margin-top: 35px;
+        padding: 45px 115px;
+    }
+}
+
+.imagem {
+    max-width: 1730px;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    margin-top: 50px;
+}
+
+.lupita {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .fonte {
+            text-decoration: underline;
+            font-weight: 500;
+            font-size: 48px;
+            color: #000;
+            margin-top: 35px;
+        }
+
+    p {
+        flex-direction: column;
+        font-weight: 500;
+        font-size: 48px;
+        color: #000;
+        margin-top: 35px;
+
+    }
+
+    span {
+        font-weight: 400;
+        font-size: 44px;
+    }
+}
+
+footer {
+    max-width: 1730px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 89px;
+    background-color: #5173c2;
+    /* margin-top: 150px; */
+}
+
+.form-box {
+    align-items: stretch;
+    display: flex;
+
+
+    h6 {
+        font-weight: 500;
+        font-size: 38px;
+        color: #fff;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 28px;
+        color: #fff;
+        margin-top: 10px;
+    }
+
+    .input-box input {
+        position: relative;
+        margin: 5px 0;
+        border-style: none;
+        border-radius: 15px;
+        width: 311px;
+        height: 48px;
+        background: #fff;
+        margin-top: 10px;
+    }
+
+    textarea {
+        border-radius: 15px;
+        width: 360px;
+        height: 136px;
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 25px;
+        color: #595959;
+        resize: none;
+    }
+
+    .input-box input::placeholder {
+        margin-right: 21px;
+        font-weight: 400;
+        font-size: 25px;
+        color: #595959;
+    }
+
+    button {
+        font-weight: 300;
+        font-size: 28px;
+        color: #fff;
+        border-radius: 25px;
+        width: 140px;
+        height: 48px;
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+        background: #45a353;
+        margin-top: 20px;
+    }
+}
+
+.navegacao {
+
+    h6 {
+        font-weight: 500;
+        font-size: 38px;
+        color: #fff;
+    }
+
+    ul {
+        gap: 39px;
+
+        li a {
+            font-weight: 300;
+            font-size: 35px;
+            color: #fff;
+        }
+    }
+}
+
+.contato {
+
+
+    ul {
+        column-count: auto;
+        align-items: center;
+        gap: 39px;
+
+        li a {
+            font-weight: 300;
+            font-size: 35px;
+            color: #fff;
+        }
+    }
+}

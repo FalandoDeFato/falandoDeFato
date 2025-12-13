@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Falando De Fato!</title>
+    <link rel="shortcut icon" href="image/iconFato.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Projeto de combate as notícias falsas">
+    <meta name="keywords" content="notícia, falando de fato, Demoday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Thaís de Souza">
+
+    <link rel="stylesheet" href="css/noticiaFraude.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="image/logo.svg" alt="Balão de fala na cor verde e azul com um check dentro">
+        <!-- shift+ a + seta para baixo = clona a linha -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="#fale-conosco">Fale Conosco</a></li>
+            </ul>
+            <div>
+                <button onclick="window.location.href='login.html';">Login</button>
+                <button onclick="window.location.href='login.html';">Cadastre-se</button>
+            </div>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- MENU DROPDOWN QUE VAI APARECER NO MOBILE -->
+    <div class="dropdown-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><a href="#fale-conosco">Fale Conosco</a></li>
+        <li class="dropdown-buttons">
+            <button onclick="window.location.href='login.html';">Login</button>
+        </li>
+        <li class="dropdown-buttons">
+            <button onclick="window.location.href='login.html';">Cadastre-se</button>
+        </li>
+    </div>
+    <main>
+        <section>
+            <div class="imagemNoticia">
+                <img src="image/GolpeWhatsNoticia.svg" alt="">
+            </div>
+            <div class="noticia">
+                <h1>Alerta da ANATEL: Como Evitar e <br>Denunciar o Golpe do WhatsApp Falso </h1>
+
+                <p class="primeiroP">A Agência Nacional de Telecomunicações (Anatel) emitiu um alerta como parte da campanha #OutubroCiberSeguro, chamando a atenção para um golpe digital que tem causado sérios prejuízos: o Golpe do WhatsApp Falso. Nele, cibercriminosos usam a foto de perfil da vítima para se passar por ela em um novo número de WhatsApp e, em seguida, solicitam dinheiro (empréstimos ou transferências via Pix) a amigos, familiares e contatos. A Anatel ressalta que a segurança digital é responsabilidade de todos, e o conhecimento sobre o golpe é o primeiro passo para combatê-lo.</p>
+
+                <p class="segundoP">Para a proteção do usuário, a Anatel orienta sobre medidas preventivas cruciais. A principal delas é ajustar as configurações de privacidade do WhatsApp, restringindo a visualização da foto de perfil, do "visto por último" e do "recado" apenas para "Meus contatos". A Agência esclarece que, neste golpe, o número usado pelos fraudadores é diferente do número original da vítima, sem haver invasão da linha ou do chip (SIM Card). No entanto, a Anatel recomenda trocar senhas por precaução, já que as informações de contato podem ter sido obtidas por vazamento de dados na internet.</p>
+
+                <p class="terceiroP">Caso o golpe seja identificado, a Anatel disponibiliza um passo a passo para a denúncia. O cidadão deve registrar imediatamente um Boletim de Ocorrência (B.O.) na Polícia Civil, preferencialmente online. Além disso, é essencial não interagir com o número falso e comunicar imediatamente todos os contatos e redes sociais sobre o perfil fraudulento. Por fim, a Agência orienta a denunciar o número diretamente dentro do aplicativo WhatsApp e enviar um e-mail para support@whatsapp.com solicitando a desativação da conta falsa.</p>
+            </div>
+        </section>
+        <div class="imagem">
+            <img src="fundos/fundoNoticias.svg" alt="">
+        </div>
+        <section>
+            <div class="informacoesNoticia">
+                <div class="lupita">
+                    <img src="image/lupitaNoticias.svg"
+                        alt="Imagem de uma raposa vestindo um sobre tudo com um chápel e uma lupa na mão direita">
+                    <div class="verificacao">
+                        <p>Data:<br><span>24/10/2025</span></p>
+                        <p>Data da Verificação:<br><span>29/11/2025</span></p>
+                        <p>Classificação:<br><span>100% Fato</span></p><br>
+                        <a href="https://www.gov.br/anatel/pt-br/assuntos/noticias/golpe-do-whatsapp-falso-veja-as-orientacoes-da-anatel-para-denunciar-e-se-proteger" class="fonte">+Fontes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="fale-conosco">
+        <div class="form-box">
+            <form action="#">
+                <h6>Contate-Nos</h6>
+                <div class="input-box">
+                    <p>Nome</p>
+                    <input type="text" placeholder="Nome Completo...">
+                </div>
+                <div class="input-box">
+                    <p>E-mail</p>
+                    <input type="email" placeholder="Digite seu e-mail...">
+                </div>
+                <div class="input-box">
+                    <p>Mensagem</p>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40"
+                        placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+        <div class="navegacao">
+            <h6>Navegação</h6>
+            <ul>
+                <li><a href="sobrenos.html">Nossa História</a></li>
+                <li><a href="https://chat-da-lupita.vercel.app">IA Lupita</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="planos.html">Nossos Planos</a></li>
+            </ul>
+        </div>
+        <div class="contato">
+            <ul>
+                <li> <img src="image/logoBranco.svg" alt="Um balão de fala com um check dentro da cor branca"></li>
+                <li><a href="mailto:falandodefato@gmail.com">falandodefato@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/falandodefato/">@falandodefato</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <!-- VLibras - Acessibilidade Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

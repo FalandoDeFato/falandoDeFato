@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title>falando DE FATO!</title>
+    <link rel="shortcut icon" href="image/iconFato.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Tela de login feita para o falando de fato">
+    <meta name="keywords" content="Login, Cadastro, Noticias Falsas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Thaís de Souza">
+
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Login form -->
+        <div class="form-box login">
+            <form action="/login" method="POST">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" name="email" placeholder="Digite seu e-mail aqui..." required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="senha" placeholder="Digite sua senha aqui..." required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p>Ou faça login em outras plataformas</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </form>
+        </div>
+
+        <!-- register form -->
+        <div class="form-box register">
+            <form action="/cadastro" method="POST">
+                <h1>Cadastre-se</h1>
+                <div class="input-box">
+                    <input type="text" name="nome" placeholder="Digite seu nome aqui..." required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Digite seu e-mail aqui..." required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="senha" placeholder="Digite sua senha aqui..." required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <button type="submit" class="btn">Cadastre-se</button>
+                <p>Ou registre-se em outras plataformas</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </form>
+        </div>
+        <!-- toggle-box -->
+        <div class="toggle-box">
+            <!-- toggle box left -->
+            <div class="toggle-painel toggle-left">
+                <h1>Olá, bem-vindo!</h1>
+                <p>Não tem uma conta?</p>
+                <button class="btn register-btn">Cadastre-se</button>
+            </div>
+            <!-- toggle box right -->
+            <div class="toggle-painel toggle-right">
+                <h1>Bem-vindo de volta!</h1>
+                <p>Já em uma conta?</p>
+                <button class="btn login-btn">Login</button>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <!-- VLibras - Acessibilidade Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

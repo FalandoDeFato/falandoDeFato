@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title>falando DE FATO!</title>
+    <link rel="shortcut icon" href="image/iconFato.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Tela de login feita para o projeto demoday">
+    <meta name="keywords" content="notícia, falando de fato, Demoday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Thaís de Souza">
+
+    <link rel="stylesheet" href="css/noticiaFraude.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="image/logo.svg" alt="Balão de fala na cor verde e azul com um check dentro">
+        <!-- shift+ a + seta para baixo = clona a linha -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="#fale-conosco">Fale Conosco</a></li>
+            </ul>
+            <div>
+                <button onclick="window.location.href='login.html';">Login</button>
+                <button onclick="window.location.href='login.html';">Cadastre-se</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="imagemNoticia">
+                <img src="image/ondaNoticia.svg" alt="">
+            </div>
+            <div class="noticia">
+                <h1>Onda gigante no <br>Litoral Norte de São Paulo</h1>
+
+                <p class="primeiroP">A notícia, veiculada pelo G1 sob a seção "Fato ou Fake", teve como objetivo desmentir um vídeo que circulou amplamente nas redes sociais, o qual alegava mostrar uma onda gigante atingindo o Litoral Norte de São Paulo. O conteúdo viralizou rapidamente e gerou grande preocupação entre a população, visto que a região tem histórico de ser afetada por eventos climáticos extremos. A rápida disseminação da gravação, que sugeria um cenário catastrófico, impôs a necessidade de uma checagem rigorosa para evitar a propagação de medo e pânico desnecessários.</p>
+
+                <p class="segundoP">O trabalho de verificação realizado pela reportagem confirmou de forma categórica que o vídeo em questão é totalmente falso e não corresponde a qualquer evento real que tenha ocorrido no litoral paulista. O veículo esclarece que a gravação não é um registro de desastre natural, mas sim uma criação artificial. O ponto crucial da desinformação reside na forma como as imagens foram geradas: elas foram criadas integralmente com o uso de ferramentas de Inteligência Artificial (IA), que são capazes de produzir simulações visuais com alto nível de realismo.</p>
+
+                <p class="terceiroP">Em conclusão, a matéria serviu como um alerta à sociedade sobre os perigos da desinformação na era digital e o uso indevido da Inteligência Artificial para fabricar conteúdo enganoso. A reportagem enfatiza que não houve registro de nenhuma onda gigante na costa de São Paulo e reforça a importância de que o público adote uma postura crítica. A recomendação final é sempre checar a fonte e a credibilidade de vídeos e informações antes de compartilhá-los, especialmente aqueles com potencial para causar alarme social.</p>
+            </div>
+        </section>
+        <div class="imagem">
+            <img src="fundos/fundoNoticias.svg" alt="">
+        </div>
+        <section>
+            <div class="informacoesNoticia">
+                <div class="lupita">
+                    <img src="image/lupitaNoticias.svg"
+                        alt="Imagem de uma raposa vestindo um sobre tudo com um chápel e uma lupa na mão direita">
+                    <div class="verificacao">
+                        <p>Data:<br><span>27/10/2025</span></p>
+                        <p>Data da Verificação:<br><span>29/11/2025</span></p>
+                        <p>Classificação:<br><span>100% Fato</span></p><br>
+                        <a href="https://g1.globo.com/fato-ou-fake/noticia/2025/10/27/e-fake-video-de-onda-gigante-atingindo-litoral-norte-de-sao-paulo-imagens-foram-criadas-com-ia.ghtml" class="fonte">+Fontes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="fale-conosco">
+        <div class="form-box">
+            <form action="#">
+                <h6>Contate-Nos</h6>
+                <div class="input-box">
+                    <p>Nome</p>
+                    <input type="text" placeholder="Nome Completo...">
+                </div>
+                <div class="input-box">
+                    <p>E-mail</p>
+                    <input type="email" placeholder="Digite seu e-mail...">
+                </div>
+                <div class="input-box">
+                    <p>Mensagem</p>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40"
+                        placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+        <div class="navegacao">
+            <h6>Navegação</h6>
+            <ul>
+                <li><a href="sobrenos.html">Nossa História</a></li>
+                <li><a href="https://chat-da-lupita.vercel.app">IA Lupita</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="planos.html">Nossos Planos</a></li>
+            </ul>
+        </div>
+        <div class="contato">
+            <ul>
+                <li> <img src="image/logoBranco.svg" alt="Um balão de fala com um check dentro da cor branca"></li>
+                <li><a href="mailto:falandodefato@gmail.com">falandodefato@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/falandodefato/">@falandodefato</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <!-- VLibras - Acessibilidade Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

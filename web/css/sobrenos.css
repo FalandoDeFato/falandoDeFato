@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+/* Importa a fonte 'Outfit' do Google Fonts, garantindo todos os pesos. */
+
+:root {
+    /* Define variáveis CSS globais para pesos e família da fonte. */
+    
+    /* 1. VARIÁVEIS PARA AS ESPESSURAS (FONT-WEIGHT) */
+    --font-weight-regular: 400;
+    /* Peso da fonte regular. */
+    --font-weight-medium: 500;
+    /* Peso da fonte médio. */
+    --font-weight-semibold: 600;
+    /* Peso da fonte semi-negrito. */
+    --font-weight-bold: 700;
+    /* Peso da fonte negrito. */
+    --font-weight-extrabold: 800;
+    /* Peso da fonte extra-negrito. */
+
+    /* 2. VARIÁVEL PARA O NOME DA FAMÍLIA DE FONTES */
+    --font-family-principal: 'Outfit', sans-serif;
+    /* Família de fontes principal. */
+}
+
+* {
+    /* Reset básico: aplica-se a todos os elementos. */
+    margin: 0;
+    /* Remove margem padrão. */
+    padding: 0;
+    /* Remove padding padrão. */
+    box-sizing: border-box;
+    /* Garante que padding e border estejam inclusos na largura/altura. */
+    font-family: "Outfit", sans-serif;
+    /* Aplica a fonte 'Outfit'. */
+    text-decoration: none;
+    /* Remove sublinhados de links. */
+    list-style: none;
+    /* Remove marcadores de lista. */
+}
+
+body {
+    /* Estilos específicos do corpo desta página. */
+    background-image: url(../fundos/fundosobre.svg);
+    /* Define a imagem de fundo específica para a página Sobre Nós. */
+    background-size: 100%;
+    /* Redimensiona a imagem para cobrir 100% da largura. */
+    background-repeat: no-repeat;
+    /* Impede a repetição da imagem de fundo. */
+}
+
+header {
+    /* Estilos do cabeçalho (igual à index.html). */
+    max-width: 1730px;
+    /* Largura máxima. */
+    margin: auto;
+    /* Centraliza horizontalmente. */
+    display: flex;
+    /* Ativa Flexbox. */
+    justify-content: space-between;
+    /* Distribui logo e navegação. */
+    padding: 55.37px 89px;
+    /* Padding superior/inferior e lateral. */
+}
+
+nav {
+    /* Estilos da navegação (igual à index.html). */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    /* Espaçamento entre links e botões. */
+
+    ul {
+        /* Lista de links. */
+        display: flex;
+        gap: 36px;
+
+        li a {
+            /* Estilos dos links. */
+            font-weight: 500;
+            font-size: 30px;
+            color: #000;
+        }
+    }
+
+    bottom {
+        /* Seletor incorreto (provavelmente pretendia estilizar o div de botões). */
+        width: 289px;
+        height: 60px;
+    }
+
+    button:first-child {
+        /* Estilo do botão "Login" (primeiro botão). */
+        font-weight: 500;
+        font-size: 30px;
+        color: #000;
+        background-color: transparent;
+        border: none;
+
+    }
+
+    button:last-child {
+        /* Estilo do botão "Cadastre-se" (último botão). */
+        font-weight: 500;
+        font-size: 30px;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        width: 194px;
+        height: 55px;
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.25);
+        background: #45a353;
+    }
+}
+
+section {
+    /* Estilos base para todas as seções principais do 'main'. */
+    max-width: 1730px;
+    /* Largura máxima para o conteúdo. */
+    margin: auto;
+    /* Centraliza horizontalmente. */
+    padding: 55.37px 89px;
+    /* Padding padrão. */
+}
+
+.plataforma {
+    /* Estilos da seção 'A falando de fato'. */
+    display: flex;
+    /* Ativa Flexbox para alinhar imagem e texto lado a lado. */
+    justify-content: space-between;
+    /* Distribui o espaço entre os elementos. */
+    align-items: center;
+    /* Centraliza os elementos verticalmente. */
+    flex-direction: row-reverse;
+    /* Inverte a ordem: imagem (computador) à direita e texto à esquerda. */
+    margin-top: 200px;
+    /* Grande margem superior para espaçamento inicial. */
+
+    .content {
+        /* Estilos do container de texto dentro desta seção. */
+        display: flex;
+        /* Ativa Flexbox. */
+        flex-direction: column;
+        /* Empilha os elementos verticalmente (h1 e p). */
+        gap: 27px;
+        /* Espaçamento vertical entre h1 e p. */
+    }
+
+    h1 {
+        /* Estilo do título 'A falando de fato'. */
+        margin-left: 140px;
+        /* Empurra o título para a direita. */
+        font-weight: 700;
+        /* Negrito. */
+        font-size: 60px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor preta. */
+    }
+
+    p {
+        /* Estilo do parágrafo de descrição da plataforma. */
+        font-weight: 700;
+        /* Negrito. */
+        font-size: 30px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor preta. */
+    }
+}
+
+.missao {
+    /* Estilos da seção 'Nossa Missão'. */
+    display: flex;
+    /* Ativa Flexbox para alinhar imagem e texto. */
+    justify-content: space-between;
+    /* Distribui o espaço. */
+    align-items: center;
+    /* Centraliza verticalmente. */
+    margin-top: 100px;
+    /* Margem superior para separar da seção anterior. */
+
+    div {
+        /* Estilos do container de texto dentro desta seção. */
+        display: flex;
+        /* Ativa Flexbox. */
+        flex-direction: column;
+        /* Empilha h2 e p verticalmente. */
+        gap: 27px;
+        /* Espaçamento entre h2 e p. */
+    }
+
+    h2 {
+        /* Estilo do título 'Nossa Missão'. */
+        margin-left: 150px;
+        /* Empurra o título para a direita. */
+        font-weight: 700;
+        /* Negrito. */
+        font-size: 60px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor preta. */
+    }
+
+    p {
+        /* Estilo do parágrafo da missão. */
+        font-weight: 700;
+        /* Negrito. */
+        font-size: 30px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor preta. */
+    }
+}
+
+.visao {
+    /* Estilos da seção 'Nossa Visão'. */
+    background-image: url(../fundos/visaofundo.svg);
+    /* Adiciona uma imagem de fundo para esta seção. */
+    background-size: 100%;
+    /* Garante que a imagem de fundo cubra a largura. */
+    background-repeat: no-repeat;
+    /* Impede a repetição. */
+    display: flex;
+    /* Ativa Flexbox. */
+    justify-content: space-between;
+    /* Distribui o espaço. */
+    align-items: center;
+    /* Centraliza verticalmente. */
+    flex-direction: row-reverse;
+    /* Inverte a ordem: imagem (artevisao) à direita e texto à esquerda. */
+    margin-top: 100px;
+    /* Margem superior para separar da seção anterior. */
+
+    div {
+        /* Estilos do container de texto dentro desta seção. */
+        display: flex;
+        /* Ativa Flexbox. */
+        flex-direction: column;
+        /* Empilha h3 e p verticalmente. */
+        gap: 27px;
+        /* Espaçamento entre h3 e p. */
+    }
+
+    h3 {
+        /* Estilo do título 'Nossa Visão'. */
+        margin-left: 170px;
+        /* Empurra o título para a direita. */
+        font-weight: 700;
+        /* Negrito. */
+        font-size: 60px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor preta. */
+    }
+
+    p {
+        /* Estilo do parágrafo da visão. */
+        font-weight: 700;
+        /* Negrito. */
+        font-size: 30px;
+        /* Tamanho da fonte. */
+        color: #000;
+        /* Cor preta. */
+    }
+}
+
+.valores {
+    /* Estilos da seção 'Nossos Valores'. */
+    display: flex;
+    /* Ativa Flexbox para alinhar imagem e texto. */
+    justify-content: space-between;
+    /* Distribui o espaço. */
+    align-items: center;
+    /* Centraliza verticalmente. */
+    margin-top: 100px;
+    /* Margem superior para separar da seção anterior. */
+
+    div {
+        /* Estilos do container de texto dentro desta seção. */
+        display: flex;
+        /* Ativa Flexbox. */
+        flex-direction: column;
+        /* Empilha h4 e p verticalmente. */
+        gap: 27px;
+        /* Espaçamento entre h4 e p. */
+    }
+
+    h4 {
+        /* Estilo do título 'Nossos Valores'. */
+        margin-left: 100px;
+        /* Empurra o título para a direita. */
+        font-weight: 700;
+        /* Negrito. */
+        font-size: 70px;
+        /* Tamanho da fonte grande. */
+        color: #000;
+        /* Cor preta. */
+    }
+
+    p {
+        /* Estilo do parágrafo dos valores. */
+        font-weight: 700;
+        /* Negrito. */
+        font-size: 35px;
+        /* Tamanho da fonte maior. */
+        color: #000;
+        /* Cor preta. */
+    }
+}
+
+footer {
+    /* Estilos do rodapé (igual à index.html). */
+    max-width: 1730px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 55.37px 89px;
+    background-color: #5173c2;
+    margin-top: 50px;
+    /* Margem superior menor que na index, aproximando-o do conteúdo 'valores'. */
+}
+
+.form-box {
+    /* Estilos para a coluna do formulário de contato. */
+    align-items: stretch;
+    /* Estende os itens (pouco efeito em uma coluna). */
+    display: flex;
+    /* Ativa o Flexbox. */
+
+
+    h6 {
+        /* Estilos para o título do formulário 'Contate-Nos'. */
+        font-weight: 500;
+        /* Peso médio. */
+        font-size: 38px;
+        /* Tamanho da fonte. */
+        color: #fff;
+        /* Cor do texto branca. */
+    }
+
+    p {
+        /* Estilos para os rótulos do formulário ('Nome', 'E-mail', 'Mensagem'). */
+        font-weight: 300;
+        /* Peso leve. */
+        font-size: 28px;
+        /* Tamanho da fonte. */
+        color: #fff;
+        /* Cor do texto branca. */
+        margin-top: 10px;
+        /* Margem superior. */
+    }
+
+    .input-box input {
+        /* Estilos para os campos de entrada de texto (Nome e E-mail). */
+        position: relative;
+        /* Define o posicionamento. */
+        margin: 5px 0;
+        /* Margem vertical. */
+        border-style: none;
+        /* Remove a borda. */
+        border-radius: 15px;
+        /* Borda arredondada. */
+        width: 311px;
+        /* Largura fixa. */
+        height: 48px;
+        /* Altura fixa. */
+        background: #fff;
+        /* Cor de fundo branca. */
+        margin-top: 10px;
+        /* Margem superior. */
+    }
+
+    textarea {
+        /* Estilos para o campo de área de texto ('Mensagem'). */
+        border-radius: 15px;
+        /* Borda arredondada. */
+        width: 360px;
+        /* Largura maior. */
+        height: 136px;
+        /* Altura fixa. */
+        margin-top: 10px;
+        /* Margem superior. */
+        font-weight: 400;
+        /* Peso regular. */
+        font-size: 25px;
+        /* Tamanho da fonte. */
+        color: #595959;
+        /* Cor do texto cinza escuro. */
+        resize: none;
+    }
+
+    .input-box input::placeholder {
+        /* Estilos para o texto de placeholder dos inputs. */
+        margin-right: 21px;
+        /* Margem à direita (pouco efeito em placeholders). */
+        font-weight: 400;
+        /* Peso regular. */
+        font-size: 25px;
+        /* Tamanho da fonte. */
+        color: #595959;
+        /* Cor do texto cinza escuro. */
+    }
+
+    button {
+        /* Estilos para o botão 'Enviar' do formulário. */
+        font-weight: 300;
+        /* Peso leve. */
+        font-size: 28px;
+        /* Tamanho da fonte. */
+        color: #fff;
+        /* Cor do texto branca. */
+        border-radius: 25px;
+        /* Borda arredondada. */
+        width: 140px;
+        /* Largura fixa. */
+        height: 48px;
+        /* Altura fixa. */
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+        /* Sombra. */
+        background: #45a353;
+        /* Cor de fundo verde. */
+        margin-top: 20px;
+        /* Margem superior. */
+    }
+}
+
+.navegacao {
+    /* Estilos para a coluna de navegação no rodapé. */
+
+    h6 {
+        /* Estilos para o título 'Navegação'. */
+        font-weight: 500;
+        /* Peso médio. */
+        font-size: 38px;
+        /* Tamanho da fonte. */
+        color: #fff;
+        /* Cor do texto branca. */
+    }
+
+    ul {
+        /* Estilos para a lista de links. */
+        gap: 39px;
+        /* Espaçamento entre os itens da lista (links). */
+
+        li a {
+            /* Estilos para os links na navegação do rodapé. */
+            font-weight: 300;
+            /* Peso leve. */
+            font-size: 35px;
+            /* Tamanho da fonte. */
+            color: #fff;
+            /* Cor do texto branca. */
+        }
+    }
+}
+
+.contato {
+    /* Estilos para a coluna de contato no rodapé. */
+
+
+    ul {
+        /* Estilos para a lista de informações de contato. */
+        column-count: auto;
+        /* Tenta criar colunas (pouco efeito aqui). */
+        align-items: center;
+        /* Centraliza os itens verticalmente. */
+        gap: 39px;
+        /* Espaçamento entre os itens da lista. */
+
+        li a {
+            /* Estilos para os links de contato (e-mail, instagram). */
+            font-weight: 300;
+            /* Peso leve. */
+            font-size: 35px;
+            /* Tamanho da fonte. */
+            color: #fff;
+            /* Cor do texto branca. */
+        }
+    }
+}

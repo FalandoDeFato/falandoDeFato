@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>falando DE FATO!</title>
+    <link rel="shortcut icon" href="image/iconFato.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Projeto de combate as notícias falsas">
+    <meta name="keywords" content="Fake News, Verificação, Demoday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Thaís de Souza">
+
+    <link rel="stylesheet" href="css/finalizacaoPagamento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="image/logo.svg" alt="Balão de fala na cor verde e azul com um check dentro">
+        <!-- shift+ a + seta para baixo = clona a linha -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="#fale-conosco">Fale Conosco</a></li>
+            </ul>
+            <div>
+                <button onclick="window.location.href='Login.html'">Login</button>
+                <button onclick="window.location.href='Login.html'">Cadastre-se</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+                <a href="pagamento.html" class="voltarPlanos">Voltar para as informações de pagamento</a>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="titulo">
+                    <img src="image/resumoPagamento.svg" alt="">
+                    <h1>Resumo do Pagamento</h1>
+                </div>
+                <div class="dados">
+                    <div class="informacaoPlano">
+                        <h2>Plano Jornalista <br><span>Cobrança Mensal</span></h2>
+                        <p>R$ 25,90</p>
+                    </div>
+                    <hr>
+                    <div class="descricao">
+                        <h3>Incluído no plano:</h3>
+                        <div class="detalhesPlano">
+                            <img src="image/iconPlanos.svg" alt="">
+                            <p>Verificações Ilimitadas</p>
+                        </div>
+                        <div class="detalhesPlano">
+                            <img src="image/iconPlanos.svg" alt="">
+                            <p>Sem Anúncios</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="valorFinal">
+                        <h4>Total a Pagar</h4>
+                        <p>R$ 25,90</p>
+                    </div>
+                </div>
+                <button class="btn-compra">Finalizar Compra</button>
+            </div>
+        </section>
+    </main>
+    <footer id="fale-conosco">
+        <div class="form-box">
+            <form action="#">
+                <h6>Contate-Nos</h6>
+                <div class="input-box">
+                    <p>Nome</p>
+                    <input type="text" placeholder="Nome Completo...">
+                </div>
+                <div class="input-box">
+                    <p>E-mail</p>
+                    <input type="email" placeholder="Digite seu e-mail...">
+                </div>
+                <div class="input-box">
+                    <p>Mensagem</p>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40"
+                        placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+        <div class="navegacao">
+            <h6>Navegação</h6>
+            <ul>
+                <li><a href="sobrenos.html">Nossa História</a></li>
+                <li><a href="https://chat-da-lupita.vercel.app">IA Lupita</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="planos.html">Nossos Planos</a></li>
+            </ul>
+        </div>
+        <div class="contato">
+            <ul>
+                <li> <img src="image/logoBranco.svg" alt="Um balão de fala com um check dentro da cor branca"></li>
+                <li><a href="mailto:falandodefato@gmail.com">falandodefato@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/falandodefato/">@falandodefato</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <!-- VLibras - Acessibilidade Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

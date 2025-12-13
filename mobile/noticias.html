@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title>Falando De Fato!</title>
+    <link rel="shortcut icon" href="image/iconFato.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Projeto de combate as notícias falsas">
+    <meta name="keywords" content="notícia, falando de fato, Demoday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Thaís de Souza">
+
+    <link rel="stylesheet" href="css/noticias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="image/logo.svg" alt="Balão de fala na cor verde e azul com um check dentro">
+        <!-- shift+ a + seta para baixo = clona a linha -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="#fale-conosco">Fale Conosco</a></li>
+            </ul>
+            <div>
+                <button onclick="window.location.href='login.html';">Login</button>
+                <button onclick="window.location.href='login.html';">Cadastre-se</button>
+            </div>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- MENU DROPDOWN QUE VAI APARECER NO MOBILE -->
+    <div class="dropdown-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><a href="#fale-conosco">Fale Conosco</a></li>
+        <li class="dropdown-buttons">
+            <button onclick="window.location.href='login.html';">Login</button>
+        </li>
+        <li class="dropdown-buttons">
+            <button onclick="window.location.href='login.html';">Cadastre-se</button>
+        </li>
+    </div>
+    <main>
+        <section>
+            <h1>Notícias Verificadas</h1>
+            <h2>Recém Verificadas</h2>
+            <div class="containerRecemVerificadas">
+                <div class="cardRecemVerificadas">
+                    <a href="noticiaOnda.html"><img src="image/ondaNoticias.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaOnda.html">
+                            <p>Onda Gigante <br><span>O G1 desmentiu um vídeo viral de uma "onda gigante" no Litoral
+                                    Norte de São Paulo, confirmando que as imagens são falsas e foram criadas por
+                                    Inteligência Artificial (IA).</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardRecemVerificadas">
+                    <a href="noticiaFraude.html"><img src="image/fraudeNoticias.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaFraude.html">
+                            <p>Fraude em pôquer <br><span>Um sofisticado esquema de fraude tecnológica em jogos de
+                                    pôquer de alto risco, arquitetado pela máfia de Nova York e que utilizava astros da
+                                    NBA como "iscas", foi desvendado.</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardRecemVerificadas">
+                    <a href="noticiaAcidenteOnibus.html"><img src="image/onibusNoticias.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaAcidenteOnibus.html">
+                            <p>Acidente com ônibus <br><span>Um ônibus de torcedores do Flamengo tombou na Dutra, em
+                                    Barra Mansa, deixando 46 feridos e causando a interdição da rodovia.</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardRecemVerificadas">
+                    <a href="noticiaRouboLouvre.html"><img src="image/louvreNoticias.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaRouboLouvre.html">
+                            <p>Roubo no Louvre <br><span>Um vídeo viral que simulava o roubo de joias no Museu do Louvre
+                                    foi desmentido pelo G1, que confirmou sua criação completa por Inteligência
+                                    Artificial (IA).</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardRecemVerificadas">
+                    <a href="noticiaVenenoCobra.html"><img src="image/venenoCobra.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaVenenoCobra.html">
+                            <p>Veneno de Cobra <br><span>O Ministério da Saúde desmentiu o boato viral de que a vacina
+                                    da Pfizer contra a Covid-19 contém veneno de cobra, reforçando a segurança do
+                                    imunizante de RNA mensageiro.</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardRecemVerificadas">
+                    <a href="noticiaVasco.html"><img src="image/vasco.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaVasco.html">
+                            <p>Fim do "jejum" <br><span>O Vasco goleou o Internacional por 5 a 1 em São Januário,
+                                    garantindo sua permanência no Brasileirão e intensificando a crise no time
+                                    gaúcho.</span></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="EmAlta">
+            <h3>Em Alta</h3>
+            <div class="containerEmAlta">
+                <div class="cardEmAlta">
+                    <a href="noticiaSenado.html"><img src="image/enfrentarDesenformacao.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaSenado.html">
+                            <p>Enfrentar a Desinformação <br><span>O Senado combate a desinformação com projetos de lei
+                                    que regulam a IA e buscam a proteção digital de menores.</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardEmAlta">
+                    <a href="noticiaTaxacaoPix.html"><img src="image/taxacaoPix.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaTaxacaoPix.html">
+                            <p>Taxação no pix <br><span>Vídeo desinforma sobre monitoramento da Receita Federal ao
+                                    sugerir
+                                    imposto de renda para transferências acima de R$ 5 mil</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardEmAlta">
+                    <a href="noticiaReceitaFederalImposto.html"><img src="image/impostos.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaReceitaFederalImposto.html">
+                            <p>Cobrar imposto <br><span>Circulam nas redes sociais publicações dizendo que a Receita
+                                    Federal
+                                    irá cobrar imposto de adultos que moram com os pais, a partir de 2026.</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardEmAlta">
+                    <a href="noticiaDescontosIndevidos.html"><img src="image/descontosIndevidos.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaDescontosIndevidos.html">
+                            <p>Descontos indevidos <br><span>Ministro-chefe da Advocacia-Geral da União (AGU) falou
+                                    sobre o trabalho do grupo de atuação do Governo Federal</span></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="GolpesVerificados">
+            <h4>GolpesVerificados</h4>
+            <div class="containerGolpesVerificados">
+                <div class="cardGolpesVerificados">
+                    <a href="noticiaGolpeMetanol.html"><img src="image/testesFalsosMetanol.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaGolpeMetanol.html">
+                            <p>Detectar Metanol <br><span>Golpistas vendem falsos testes caseiros de metanol em bebidas;
+                                    Senacon e Procon alertam que não há produto certificado para essa detecção no
+                                    Brasil.</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardGolpesVerificados">
+                    <a href="noticiaGolpeVozClonada.html"><img src="image/clonagemVoz.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaGolpeVozClonada.html">
+                            <p>Voz Clonada <br><span>Golpe da Ligação Muda usa IA para clonar sua voz e aplicar
+                                    fraudes.</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardGolpesVerificados">
+                    <a href="noticiaGolpeBeneficiarioInss.html"><img src="image/inss.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaGolpeBeneficiarioInss.html">
+                            <p>Golpe do INSS <br><span>O INSS alerta contra golpistas que usam o nome da Central 135
+                                    para pedir dados ou dinheiro, sob a falsa ameaça de bloquear benefícios</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardGolpesVerificados">
+                    <a href="noticiaGolpeUrubuDoPix.html"><img src="image/urubuPix.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaGolpeUrubuDoPix.html">
+                            <p>Urubu do Pix <br><span>O "Urubu do Pix" é um golpe financeiro que promete multiplicar
+                                    dinheiro, exigindo que as vítimas desconfiem de promessas fáceis. </span>
+                        </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="cardGolpesVerificados">
+                    <a href="noticiaPerfilFalso.html"><img src="image/golpeWhats.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiaGolpePerfilFalso.html">
+                            <p>Perfil falso no WhatsApp <br><span> Anatel alerta sobre o Golpe do WhatsApp Falso e
+                                    ensina como se proteger.</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="cardGolpesVerificados">
+                    <a href="noticiaGolpeClonagemCartao.html"><img src="image/cartaoCredito.svg" alt=""></a>
+                    <div class="card-content">
+                        <a href="noticiasClonagemCartao.html">
+                            <p>Clonagem de Cartão <br><span>Segundo a FEBRABAN (pesquisa de 2025), a clonagem de cartão
+                                    ou
+                                    golpes com troca de cartões são os mais citados entre quem sofreu golpes
+                                    bancários.</span></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="fale-conosco">
+        <div class="form-box">
+            <form action="#">
+                <h6>Contate-Nos</h6>
+                <div class="input-box">
+                    <p>Nome</p>
+                    <input type="text" placeholder="Nome Completo...">
+                </div>
+                <div class="input-box">
+                    <p>E-mail</p>
+                    <input type="email" placeholder="Digite seu e-mail...">
+                </div>
+                <div class="input-box">
+                    <p>Mensagem</p>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40"
+                        placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+        <div class="navegar">
+            <div class="navegacao">
+                <h6>Navegação</h6>
+                <ul>
+                    <li><a href="sobrenos.html">Nossa História</a></li>
+                    <li><a href="https://chat-da-lupita.vercel.app">IA Lupita</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="planos.html">Nossos Planos</a></li>
+                </ul>
+            </div>
+            <div class="contato">
+                <ul>
+                    <li> <img src="image/logoBranco.svg" alt="Um balão de fala com um check dentro da cor branca"></li>
+                    <li><a href="mailto:falandodefato@gmail.com">falandodefato@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/falandodefato/">@falandodefato</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+    <!-- VLibras - Acessibilidade Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

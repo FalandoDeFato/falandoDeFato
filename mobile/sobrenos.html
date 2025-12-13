@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Falando De Fato!</title>
+    <link rel="shortcut icon" href="image/iconFato.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Projeto de combate as notícias falsas">
+    <meta name="keywords" content="notícia, falando de fato, Demoday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Thaís de Souza">
+
+    <link rel="stylesheet" href="css/sobrenos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="image/logo.svg" alt="Balão de fala na cor verde e azul com um check dentro">
+        <!-- shift+ a + seta para baixo = clona a linha -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="#fale-conosco">Fale Conosco</a></li>
+            </ul>
+            <div>
+                <button onclick="window.location.href='login.html';">Login</button>
+                <button onclick="window.location.href='login.html';">Cadastre-se</button>
+            </div>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- MENU DROPDOWN QUE VAI APARECER NO MOBILE -->
+    <div class="dropdown-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><a href="#fale-conosco">Fale Conosco</a></li>
+        <li class="dropdown-buttons">
+            <button onclick="window.location.href='login.html';">Login</button>
+        </li>
+        <li class="dropdown-buttons">
+            <button onclick="window.location.href='login.html';">Cadastre-se</button>
+        </li>
+    </div>
+    <main>
+        <section class="plataforma">
+            <img src="image/computador.svg" alt="">
+            <div class="content">
+                <h1>A falando de fato</h1>
+                <p>Somos uma plataforma digital que usa IA para combater a desinformação, permitindo que usuários  digitem textos e chequem notícias de forma automatizada e transparente em segundos, o que garante um consumo de informação mais seguro e consciente.</p>
+            </div>
+        </section>
+        <section class="missao">
+            <img src="image/missao.svg" alt="">
+            <div>
+                <h2>Nossa Missão</h2>
+                <p>Nosso objetivo é combater a desinformação em massa de maneira rápida e acessível por meio da Inteligência Artificial, que atua realizando pesquisas em tempo real e checagens automatizadas e precisas para validar notícias exclusivamente com base em fontes de informação confiáveis.</p>
+            </div>
+        </section>
+        <section class="visao">
+            <div class="artevisao">
+                <img src="image/visao.svg" alt="">
+            </div>
+            <div>
+                <h3>Nossa Visão</h3>
+                <p>A visão da plataforma é se tornar, a curto prazo, a principal e mais acessível ferramenta contra a desinformação e, a longo prazo, ser crucial no ciclo eleitoral de 2026 em São Paulo para reduzir as fake news e restabelecer a confiança na sociedade.</p>
+            </div>
+        </section>
+        <section class="valores">
+            <img src="image/valores.svg" alt="">
+            <div>
+                <h4>Nossos Valores</h4>
+                <p>E para cumprir a nossa missão e alcançar a nossa visão, os nossos valores são guiados por cinco pilares essenciais: a transparência, a credibilidade, a educação, a inovação e a responsabilidade social.</p>
+            </div>
+        </section>
+    </main>
+    <footer id="fale-conosco">
+        <div class="form-box">
+            <form action="#">
+                <h6>Contate-Nos</h6>
+                <div class="input-box">
+                    <p>Nome</p>
+                    <input type="text" placeholder="Nome Completo...">
+                </div>
+                <div class="input-box">
+                    <p>E-mail</p>
+                    <input type="email" placeholder="Digite seu e-mail...">
+                </div>
+                <div class="input-box">
+                    <p>Mensagem</p>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40"
+                        placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+        <div class="navegacao">
+            <h6>Navegação</h6>
+            <ul>
+                <li><a href="sobrenos.html">Nossa História</a></li>
+                <li><a href="https://chat-da-lupita.vercel.app">IA Lupita</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="planos.html">Nossos Planos</a></li>
+            </ul>
+        </div>
+        <div class="contato">
+            <ul>
+                <li> <img src="image/logoBranco.svg" alt="Um balão de fala com um check dentro da cor branca"></li>
+                <li><a href="mailto:falandodefato@gmail.com">falandodefato@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/falandodefato/">@falandodefato</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <!-- VLibras - Acessibilidade Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

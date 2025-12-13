@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Falando De Fato!</title>
+    <link rel="shortcut icon" href="image/iconFato.png" type="image/x-icon">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="description" content="Projeto de combate as notícias falsas">
+    <meta name="keywords" content="notícia, falando de fato, Demoday">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="author" content="Thaís de Souza">
+
+    <link rel="stylesheet" href="css/noticiaFraude.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="image/logo.svg" alt="Balão de fala na cor verde e azul com um check dentro">
+        <!-- shift+ a + seta para baixo = clona a linha -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="#fale-conosco">Fale Conosco</a></li>
+            </ul>
+            <div>
+                <button onclick="window.location.href='login.html';">Login</button>
+                <button onclick="window.location.href='login.html';">Cadastre-se</button>
+            </div>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- MENU DROPDOWN QUE VAI APARECER NO MOBILE -->
+    <div class="dropdown-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><a href="#fale-conosco">Fale Conosco</a></li>
+        <li class="dropdown-buttons">
+            <button onclick="window.location.href='login.html';">Login</button>
+        </li>
+        <li class="dropdown-buttons">
+            <button onclick="window.location.href='login.html';">Cadastre-se</button>
+        </li>
+    </div>
+    <main>
+        <section>
+            <div class="imagemNoticia">
+                <img src="image/venenoDeCobra.svg" alt="">
+            </div>
+            <div class="noticia">
+                <h1>Vacina da Pfizer Não Contém Veneno de Cobra, <br>Diz Ministério da Saúde</h1>
+
+                <p class="primeiroP">O Ministério da Saúde, por meio de seu portal "Saúde com Ciência", publicou uma nota desmentindo veementemente um boato que circulou nas redes sociais alegando que a vacina da Pfizer contra a Covid-19 conteria veneno de cobra em sua composição. Essa afirmação infundada fazia parte de um vídeo viral de um suposto especialista, que atribuía diversas doenças pós-vacinação a essa substância fictícia. A iniciativa do Ministério teve como objetivo combater mais um episódio de desinformação (fake news) que tenta minar a confiança da população na vacinação.</p>
+
+                <p class="segundoP">Para combater o boato, o órgão federal esclareceu a composição e o funcionamento da vacina Pfizer/BioNTech, também conhecida como Comirnaty. A reportagem afirma categoricamente que a fórmula do imunizante não possui absolutamente nenhum componente relacionado a veneno de cobra ou qualquer substância similar. A vacina é baseada na inovadora tecnologia de RNA mensageiro (mRNA), que consiste em entregar ao organismo "instruções" sintéticas para que ele produza a proteína Spike do coronavírus, estimulando, assim, a criação de anticorpos e a resposta imune.</p>
+
+                <p class="terceiroP">O Ministério da Saúde reitera a segurança e a eficácia da vacina, que possui autorização de uso emergencial da Organização Mundial da Saúde (OMS), após exaustiva avaliação de qualidade. A nota finaliza alertando a população sobre a importância de identificar e evitar a circulação de desinformação, recomendando que se busque sempre a confirmação de informações sobre vacinas em fontes oficiais e científicas. O órgão reforça que a vacinação é um ato de responsabilidade coletiva e que a ciência é a melhor aliada na saúde pública.</p>
+            </div>
+        </section>
+        <div class="imagem">
+            <img src="fundos/fundoNoticias.svg" alt="">
+        </div>
+        <section>
+            <div class="informacoesNoticia">
+                <div class="lupita">
+                    <img src="image/lupitaNoticias.svg"
+                        alt="Imagem de uma raposa vestindo um sobre tudo com um chápel e uma lupa na mão direita">
+                    <div class="verificacao">
+                        <p>Data:<br><span>16/01/2025 </span></p>
+                        <p>Data da Verificação:<br><span>29/11/2025</span></p>
+                        <p>Classificação:<br><span>100% Fake News</span></p><br>
+                        <a href="https://www.gov.br/saude/pt-br/assuntos/saude-com-ciencia/noticias/2025/janeiro/e-falso-que-a-vacina-da-pfizer-tem-veneno-de-cobra" class="fonte">+Fontes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="fale-conosco">
+        <div class="form-box">
+            <form action="#">
+                <h6>Contate-Nos</h6>
+                <div class="input-box">
+                    <p>Nome</p>
+                    <input type="text" placeholder="Nome Completo...">
+                </div>
+                <div class="input-box">
+                    <p>E-mail</p>
+                    <input type="email" placeholder="Digite seu e-mail...">
+                </div>
+                <div class="input-box">
+                    <p>Mensagem</p>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40"
+                        placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+                <button>Enviar</button>
+            </form>
+        </div>
+        <div class="navegacao">
+            <h6>Navegação</h6>
+            <ul>
+                <li><a href="sobrenos.html">Nossa História</a></li>
+                <li><a href="https://chat-da-lupita.vercel.app">IA Lupita</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="planos.html">Nossos Planos</a></li>
+            </ul>
+        </div>
+        <div class="contato">
+            <ul>
+                <li> <img src="image/logoBranco.svg" alt="Um balão de fala com um check dentro da cor branca"></li>
+                <li><a href="mailto:falandodefato@gmail.com">falandodefato@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/falandodefato/">@falandodefato</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <!-- VLibras - Acessibilidade Libras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>
