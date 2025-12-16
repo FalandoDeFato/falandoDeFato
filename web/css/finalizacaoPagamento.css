@@ -82,13 +82,35 @@ nav {
         /* Espaçamento entre os itens da lista (links). */
 
         li a {
-            /* Estilos aplicados aos links <a> dentro dos itens da lista <li>. */
+            position: relative;
+            display: inline-block;
+            /* MUITO IMPORTANTE */
+            text-decoration: none;
             font-weight: 500;
-            /* Peso médio da fonte. */
             font-size: 30px;
-            /* Tamanho da fonte dos links. */
             color: #000;
-            /* Cor do texto preta. */
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+
+        li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 4px;
+            background-color: #45a353;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        li a:hover {
+            color: #45a353;
+            transform: translateY(-2px);
+        }
+
+        li a:hover::after {
+            width: 100%;
         }
     }
 
@@ -112,7 +134,12 @@ nav {
         /* Cor de fundo azul claro. */
         border: none;
         /* Remove a borda padrão do botão. */
+        transition: transform 0.25s ease, color 0.25s ease;
+    }
 
+    button:first-child:hover {
+        color: #45a353;
+        transform: translateY(-2px);
     }
 
     button:last-child {
@@ -135,6 +162,12 @@ nav {
         /* Adiciona uma sombra suave ao botão. */
         background: #45a353;
         /* Cor de fundo verde. */
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    button:last-child:hover {
+        transform: translateY(-3px);
+        box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -159,6 +192,127 @@ section {
 .voltarPlanos  {
     color: #000
 } 
+
+/* Adicione ao seu CSS existente - Esta opção combina o melhor de todas */
+
+.voltar {
+    font-weight: 400;
+    font-size: 32px;
+    color: #000;
+    margin-left: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    padding: 8px 24px 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(
+        to right,
+        rgba(69, 163, 83, 0.05) 0%,
+        rgba(69, 163, 83, 0.02) 50%,
+        transparent 100%
+    );
+    border-left: 3px solid transparent;
+}
+
+.voltar:hover {
+    transform: translateX(-8px);
+    background: linear-gradient(
+        to right,
+        rgba(69, 163, 83, 0.1) 0%,
+        rgba(69, 163, 83, 0.05) 50%,
+        transparent 100%
+    );
+    border-left: 3px solid #45a353;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 
+        5px 5px 15px rgba(69, 163, 83, 0.1),
+        -2px -2px 10px rgba(255, 255, 255, 0.8);
+}
+
+.voltar i {
+    font-size: 24px;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: #666;
+}
+
+.voltar:hover i {
+    transform: translateX(-4px) scale(1.1);
+    color: #45a353;
+    animation: gentleBounce 1s infinite;
+}
+
+@keyframes gentleBounce {
+    0%, 100% {
+        transform: translateX(-4px) scale(1.1);
+    }
+    50% {
+        transform: translateX(-6px) scale(1.15);
+    }
+}
+
+.voltarPlanos {
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.voltarPlanos::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #45a353, #5173c2);
+    border-radius: 1px;
+    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.voltar:hover .voltarPlanos {
+    color: #45a353;
+    padding-left: 2px;
+}
+
+.voltar:hover .voltarPlanos::before {
+    width: 100%;
+}
+
+/* Efeito sutil de ripple ao clicar */
+.voltar:active {
+    transform: translateX(-8px) scale(0.98);
+}
+
+.voltar:active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(69, 163, 83, 0.1) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    to {
+        width: 300%;
+        height: 300%;
+        opacity: 0;
+    }
+}
 
 .fa-solid {
     font-weight: 400;
@@ -269,10 +423,145 @@ h3 {
     text-align: center;
     color: #fff;
     margin-top: 25px;
+    box-shadow: 0 6px 0 #2f7c3a;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.btn-compra:hover{
+    transform: translateY(-4px);
+    background-color: #54c365;
 }
 
 hr {
     margin-top: 30px;
+}
+
+/* Animações para o footer */
+footer {
+    animation: fadeInUp 0.8s ease-out 1.1s both;
+}
+
+.form-box, .navegacao, .contato {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.form-box {
+    animation-delay: 1.2s;
+}
+
+.navegacao {
+    animation-delay: 1.3s;
+}
+
+.contato {
+    animation-delay: 1.4s;
+}
+
+/* Efeito nos campos do formulário */
+.input-box input, textarea {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.input-box input:focus, textarea:focus {
+    outline: none;
+    border-color: #45a353;
+    box-shadow: 0 0 0 3px rgba(69, 163, 83, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Botão do formulário */
+.form-box button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.form-box button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.form-box button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(69, 163, 83, 0.4);
+}
+
+.form-box button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Animações para os links de navegação do footer */
+.navegacao li a, .contato li a {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.navegacao li a::after, .contato li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #45a353;
+    transition: width 0.3s ease;
+}
+
+.navegacao li a:hover, .contato li a:hover {
+    color: #45a353;
+    transform: translateX(5px);
+}
+
+.navegacao li a:hover::after, .contato li a:hover::after {
+    width: 100%;
+}
+
+/* Responsividade para as animações */
+@media (max-width: 768px) {
+    .noticia h1 {
+        font-size: 48px;
+    }
+    
+    .noticia p {
+        font-size: 20px;
+        padding: 0 20px !important;
+    }
+    
+    .fonte {
+        font-size: 32px;
+    }
+    
+    .verificacao p {
+        font-size: 32px;
+    }
+    
+    .verificacao span {
+        font-size: 28px;
+    }
+}
+
+/* Scroll reveal básico */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer {

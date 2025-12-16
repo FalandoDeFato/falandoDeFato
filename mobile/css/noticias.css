@@ -301,6 +301,25 @@ h4 {
     }
 }
 
+/* Cards clicáveis – feedback ao toque (mobile) */
+.cardRecemVerificadas,
+.cardEmAlta,
+.cardGolpesVerificados {
+  transition: 
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+/* Efeito ao tocar */
+.cardRecemVerificadas:active,
+.cardEmAlta:active,
+.cardGolpesVerificados:active {
+  transform: scale(0.96);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+
 footer {
     /* Estilos para o rodapé da página. */
     max-width: 440px;

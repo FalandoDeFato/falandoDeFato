@@ -22,7 +22,7 @@
 }
 
 * {
-    /* O seletor universal '*' aplica regras a **todos** os elementos da página. */
+    /* O seletor universal '' aplica regras a **todos* os elementos da página. */
     margin: 0;
     /* Remove a margem padrão de todos os elementos. */
     padding: 0;
@@ -80,17 +80,48 @@ nav {
         /* Espaçamento entre os itens da lista (links). */
 
         li a {
-            /* Estilos aplicados aos links <a> dentro dos itens da lista <li>. */
+            position: relative;
+            display: inline-block;
+            /* MUITO IMPORTANTE */
+            text-decoration: none;
             font-weight: 500;
-            /* Peso médio da fonte. */
             font-size: 30px;
-            /* Tamanho da fonte dos links. */
             color: #000;
-            /* Cor do texto preta. */
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+
+        li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 4px;
+            background-color: #45a353;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        li a:hover {
+            color: #45a353;
+            transform: translateY(-2px);
+        }
+
+        li a:hover::after {
+            width: 100%;
+        }
+
+        li a.active {
+            color: #45a353;
+        }
+
+        li a.active::after {
+            width: 100%;
         }
     }
 
     buttom {
+        /* erro aqui */
         /* Seletor incorreto (deveria ser 'button' ou '.nav div button'). */
         width: 289px;
         /* Define a largura para o (provável) elemento 'button'. */
@@ -110,7 +141,12 @@ nav {
         /* Cor de fundo azul claro. */
         border: none;
         /* Remove a borda padrão do botão. */
+        transition: transform 0.25s ease, color 0.25s ease;
+    }
 
+    button:first-child:hover {
+        color: #45a353;
+        transform: translateY(-2px);
     }
 
     button:last-child {
@@ -133,6 +169,12 @@ nav {
         /* Adiciona uma sombra suave ao botão. */
         background: #45a353;
         /* Cor de fundo verde. */
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    button:last-child:hover {
+        transform: translateY(-3px);
+        box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -235,6 +277,18 @@ section {
             /* Largura fixa. */
             height: 77px;
             /* Altura fixa. */
+            cursor: pointer;
+
+
+            box-shadow: 0 6px 0 #2f7c3a;
+            transition: transform 0.25s ease, background-color 0.25s ease;
+
+            animation: pulse 2.5s infinite;
+        }
+
+        button:first-child:hover {
+            transform: translateY(-4px);
+            background-color: #54c365;
         }
     }
 }
@@ -295,6 +349,12 @@ h2 {
     height: 394px;
     /* Altura fixa do card. */
     border-radius: 50px 0;
+    transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border 0.3s ease;
+  border: 2px solid transparent;
+  cursor: default;
 
 
     p:first-child {
@@ -320,6 +380,31 @@ h2 {
     }
 }
 
+/* Hover do card */
+.icon1:hover,
+.icon2:hover,
+.icon3:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+  border: 2px solid #45a353;
+}
+
+.icon1 img,
+.icon2 img,
+.icon3 img {
+  width: 70px;
+  transition: transform 0.35s ease;
+}
+
+/* Ícone reage ao hover do card */
+.icon1:hover img,
+.icon2:hover img,
+.icon3:hover img {
+  transform: scale(1.15) rotate(-2deg);
+}
+
+
+
 .features-container {
     /* Estilos para o container que agrupa os cards de funcionalidades. */
     display: flex;
@@ -332,6 +417,39 @@ h2 {
     /* Espaçamento entre os cards. */
     /* Adiciona o espaçamento de 28px entre eles */
 }
+
+/* estilos do header */
+/* estilos do h2 */
+/* estilos dos cards (.icon1, .icon2, .icon3) */
+/* estilos do container */
+
+/* 🔽 AQUI EMBAIXO 🔽 */
+.icon1,
+.icon2,
+.icon3 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.icon2 {
+  animation-delay: 0.15s;
+}
+
+.icon3 {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 .golpes {
@@ -447,6 +565,61 @@ h2 {
     /* Margem superior para separar da primeira linha. */
 }
 
+/* Animação de entrada dos cards */
+.card1,
+.card2,
+.card3,
+.card4 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: golpesFadeUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+}
+
+.iconeWhatsDolar img {
+  width: 70px;
+  transition: transform 0.35s ease;
+}
+
+.card1:hover .iconeWhatsDolar img,
+.card2:hover .iconeWhatsDolar img,
+.card3:hover .iconeWhatsDolar img,
+.card4:hover .iconeWhatsDolar img {
+  transform: scale(1.15) rotate(-3deg);
+}
+
+
+/* Efeito em cascata */
+.card2 {
+  animation-delay: 0.1s;
+}
+
+.card3 {
+  animation-delay: 0.2s;
+}
+
+.card4 {
+  animation-delay: 0.3s;
+}
+
+/* Keyframes precisam ficar fora de tudo */
+@keyframes golpesFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .containerAlta {
     /* Estilos para o container de notícias "Em Alta" (carousel horizontal). */
     display: flex;
@@ -467,7 +640,7 @@ h2 {
     /* ADICIONE OU AUMENTE A ALTURA MÍNIMA AQUI */
     min-height: 600px;
     /* Define uma altura mínima para o container do carousel. */
-    /* **Ajuste este valor** para ser um pouco maior que o card mais alto. */
+    /* *Ajuste este valor* para ser um pouco maior que o card mais alto. */
 }
 
 
@@ -605,43 +778,223 @@ h4 {
 
 }
 
-.mensagem {
-    /* Estilos para a seção 'Avaliações'. */
-    display: flex;
-    /* Ativa o Flexbox. */
-    align-items: center;
-    /* Centraliza os itens verticalmente. */
-    justify-content: center;
-    /* Centraliza os itens horizontalmente. */
-    gap: 60px;
-    /* Espaçamento entre a imagem de balão e o texto. */
-    margin-top: 220px;
-    /* Margem superior grande para separar da seção anterior. */
+.avaliacoes {
+  text-align: center;
+  overflow: hidden;
+  background-color: #D4DDFA;
+}
 
-    h5 {
-        /* Estilos para o título 'Avaliações'. */
-        font-weight: 700;
-        /* Peso negrito. */
-        font-size: 75px;
-        /* Tamanho grande. */
-        text-align: center;
-        /* Centraliza o texto. */
-        color: #45a353;
-        /* Cor do texto verde. */
+.avaliacoes h2 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #45a353;
+}
+
+.avaliacoes .subtitulo {
+  font-size: 38px;
+  margin-top: 8px;
+  color: #000;
+}
+
+/* MARQUEE */
+.marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.marquee {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+animation: scroll 45s linear infinite;}
+
+/* pausa se tocar */
+.marquee-wrapper:active .marquee {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* CARD */
+.testimonial-card {
+  width: 340px;
+  min-height: 200px;
+  background: linear-gradient(180deg, #f1f4ff, #ffffff);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  flex-shrink: 0;
+  text-align: left;
+}
+
+
+/* AUTOR */
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author strong {
+  display: block;
+  font-size: 16px;
+}
+
+.author span {
+  font-size: 14px;
+  color: #666;
+}
+
+.testimonial-card p {
+  margin-top: 28px;
+  font-size: 28px;
+  color: #333;
+  line-height: 1.5;
+}
+
+
+/* Animações para o footer */
+footer {
+    animation: fadeInUp 0.8s ease-out 1.1s both;
+}
+
+.form-box, .navegacao, .contato {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.form-box {
+    animation-delay: 1.2s;
+}
+
+.navegacao {
+    animation-delay: 1.3s;
+}
+
+.contato {
+    animation-delay: 1.4s;
+}
+
+/* Efeito nos campos do formulário */
+.input-box input, textarea {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.input-box input:focus, textarea:focus {
+    outline: none;
+    border-color: #45a353;
+    box-shadow: 0 0 0 3px rgba(69, 163, 83, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Botão do formulário */
+.form-box button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.form-box button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.form-box button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(69, 163, 83, 0.4);
+}
+
+.form-box button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Animações para os links de navegação do footer */
+.navegacao li a, .contato li a {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.navegacao li a::after, .contato li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #45a353;
+    transition: width 0.3s ease;
+}
+
+.navegacao li a:hover, .contato li a:hover {
+    color: #45a353;
+    transform: translateX(5px);
+}
+
+.navegacao li a:hover::after, .contato li a:hover::after {
+    width: 100%;
+}
+
+/* Responsividade para as animações */
+@media (max-width: 768px) {
+    .noticia h1 {
+        font-size: 48px;
     }
-
-    p {
-        /* Estilos para o parágrafo de descrição. */
-        font-weight: 400;
-        /* Peso regular. */
-        font-size: 55px;
-        /* Tamanho grande. */
-        text-align: center;
-        /* Centraliza o texto. */
-        color: #000;
-        /* Cor do texto preta. */
+    
+    .noticia p {
+        font-size: 20px;
+        padding: 0 20px !important;
     }
+    
+    .fonte {
+        font-size: 32px;
+    }
+    
+    .verificacao p {
+        font-size: 32px;
+    }
+    
+    .verificacao span {
+        font-size: 28px;
+    }
+}
 
+/* Scroll reveal básico */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer {
@@ -658,8 +1011,6 @@ footer {
     /* Preenchimento superior/inferior e lateral. */
     background-color: #5173c2;
     /* Cor de fundo azul escuro. */
-    margin-top: 500px;
-    /* Margem superior muito grande para separar do conteúdo anterior. */
 }
 
 /* Popup da finalização da compra */

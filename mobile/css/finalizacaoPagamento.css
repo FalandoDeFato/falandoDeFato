@@ -163,6 +163,36 @@ section {
     color: #000
 } 
 
+.voltarPlanos {
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.voltarPlanos::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #45a353, #5173c2);
+    border-radius: 1px;
+    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.voltar:active .voltarPlanos {
+    color: #45a353;
+    padding-left: 2px;
+}
+
+.voltar:active .voltarPlanos::before {
+    width: 100%;
+}
+
 .fa-solid {
     font-weight: 400;
     font-size: 18px;
@@ -272,6 +302,11 @@ h3 {
     text-align: center;
     color: #fff;
     margin-top: 25px;
+}
+
+.btn-compra:active{
+    transform: scale(0.96);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
 hr {
